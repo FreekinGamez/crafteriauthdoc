@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrafteriAuth Login Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .examples {
+            margin: 40px 0;
+        }
+        
+        .example-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .crafteri-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        
+        .crafteri-login-btn-blue {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+        }
+        
+        .crafteri-login-btn-outline {
+            background-color: white;
+            color: #1a73e8;
+            border: 1px solid #1a73e8;
+        }
+        
+        .crafteri-login-btn-dark {
+            background-color: #333;
+            color: white;
+            border: none;
+        }
+        
+        pre {
+            background-color: #f6f8fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        
+        .crafteri-login-btn-custom {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.2s;
+            max-width: 220px;
+        }
+        
+        .crafteri-login-btn-custom:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .crafteri-logo {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CrafteriAuth Login Button Examples</h1>
+    <p>
+        Here are several examples of how you can implement the "Login with Crafteri" button in your application.
+        Remember to replace <code>YOUR_REDIRECT_URL</code> with your actual callback URL.
+    </p>
+
+    <div class="examples">
+        <div class="example-section">
+            <h2>Standard Blue Button</h2>
+            
+            <a href="https://auth.crafteri.net/login?service=YOUR_REDIRECT_URL" class="crafteri-btn crafteri-login-btn-blue">
+                Login with Crafteri
+            </a>
+            
+            <h3>HTML Code:</h3>
+            <pre>&lt;a href="https://auth.crafteri.net/login?service=YOUR_REDIRECT_URL" class="crafteri-btn crafteri-login-btn-blue"&gt;
+    Login with Crafteri
+&lt;/a&gt;
+
+&lt;style&gt;
+    .crafteri-btn {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    .crafteri-login-btn-blue {
+        background-color: #1a73e8;
+        color: white;
+        border: none;
+    }
+&lt;/style&gt;</pre>
+        </div>
+        
+        <div class="example-section">
+            <h2>Outline Button</h2>
+            
+            <a href="https://auth.crafteri.net/login?service=YOUR_REDIRECT_URL" class="crafteri-btn crafteri-login-btn-outline">
+                Login with Crafteri
+            </a>
+            
+            <h3>HTML Code:</h3>
+            <pre>&lt;a href="https://auth.crafteri.net/login?service=YOUR_REDIRECT_URL" class="crafteri-btn crafteri-login-btn-outline"&gt;
+    Login with Crafteri
+&lt;/a&gt;
+
+&lt;style&gt;
+    .crafteri-btn {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    .crafteri-login-btn-outline {
+        background-color: white;
+        color: #1a73e8;
+        border: 1px solid #1a73e8;
+    }
+&lt;/style&gt;</pre>
+        </div>
+        
+        <div class="example-section">
+            <h2>Dark Button</h2>
+            
+            <a href="https://auth.crafteri.net/login?service=YOUR_REDIRECT_URL" class="crafteri-btn crafteri-login-btn-dark">
+                Login with Crafteri
+            </a>
+            
+            <h3>HTML Code:</h3>
+            <pre>&lt;a href="https://auth.crafteri.net/login?service=YOUR_REDIRECT_URL" class="crafteri-btn crafteri-login-btn-dark"&gt;
+    Login with Crafteri
+&lt;/a&gt;
+
+&lt;style&gt;
+    .crafteri-btn {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    .crafteri-login-btn-dark {
+        background-color: #333;
+        color: white;
+        border: none;
+    }
+&lt;/style&gt;</pre>
+        </div>
+        
+        <div class="example-section">
+            <h2>Button with Logo</h2>
+            
+            <a href="https://auth.crafteri.net/login?service=YOUR_REDIRECT_URL" class="crafteri-login-btn-custom">
+                <div class="crafteri-logo">🔐</div> <!-- Replace with actual logo -->
+                <span>Sign in with Crafteri</span>
+            </a>
+            
+            <h3>HTML Code:</h3>
+            <pre>&lt;a href="https://auth.crafteri.net/login?service=YOUR_REDIRECT_URL" class="crafteri-login-btn-custom"&gt;
+    &lt;img src="crafteri-logo.png" alt="Crafteri Logo" class="crafteri-logo"&gt;
+    &lt;span&gt;Sign in with Crafteri&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;style&gt;
+    .crafteri-login-btn-custom {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: all 0.2s;
+    }
+    
+    .crafteri-login-btn-custom:hover {
+        background-color: #f5f5f5;
+    }
+    
+    .crafteri-logo {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+&lt;/style&gt;</pre>
+        </div>
+    </div>
+</body>
+</html>

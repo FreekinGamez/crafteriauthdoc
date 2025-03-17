@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrafteriAuth Button Examples</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .button-container {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .code-block {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        
+        /* Button Styles */
+        .crafteri-button-default {
+            display: inline-block;
+            background-color: #4285f4;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .crafteri-button-default:hover {
+            background-color: #3367d6;
+        }
+        
+        .crafteri-button-outline {
+            display: inline-block;
+            background-color: white;
+            color: #4285f4;
+            border: 1px solid #4285f4;
+            padding: 9px 15px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .crafteri-button-outline:hover {
+            background-color: #f1f6ff;
+        }
+        
+        .crafteri-button-dark {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .crafteri-button-dark:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>CrafteriAuth Button Examples</h1>
+    <p>This page provides ready-to-use button examples for integrating CrafteriAuth into your website.</p>
+    <p>Remember to replace <code>https://your-website.com/crafteriauth/return</code> with your actual callback URL.</p>
+    
+    <div class="button-container">
+        <h3>Default Style Button</h3>
+        <a href="https://auth.crafteri.net/login?service=https://your-website.com/crafteriauth/return" class="crafteri-button-default">
+            Login with Crafteri
+        </a>
+        
+        <div class="code-block">
+            <pre><code>&lt;a href="https://auth.crafteri.net/login?service=https://your-website.com/crafteriauth/return" class="crafteri-button-default"&gt;
+    Login with Crafteri
+&lt;/a&gt;
+
+&lt;style&gt;
+.crafteri-button-default {
+    display: inline-block;
+    background-color: #4285f4;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.crafteri-button-default:hover {
+    background-color: #3367d6;
+}
+&lt;/style&gt;</code></pre>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <h3>Outline Style Button</h3>
+        <a href="https://auth.crafteri.net/login?service=https://your-website.com/crafteriauth/return" class="crafteri-button-outline">
+            Login with Crafteri
+        </a>
+        
+        <div class="code-block">
+            <pre><code>&lt;a href="https://auth.crafteri.net/login?service=https://your-website.com/crafteriauth/return" class="crafteri-button-outline"&gt;
+    Login with Crafteri
+&lt;/a&gt;
+
+&lt;style&gt;
+.crafteri-button-outline {
+    display: inline-block;
+    background-color: white;
+    color: #4285f4;
+    border: 1px solid #4285f4;
+    padding: 9px 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.crafteri-button-outline:hover {
+    background-color: #f1f6ff;
+}
+&lt;/style&gt;</code></pre>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <h3>Dark Style Button</h3>
+        <a href="https://auth.crafteri.net/login?service=https://your-website.com/crafteriauth/return" class="crafteri-button-dark">
+            Login with Crafteri
+        </a>
+        
+        <div class="code-block">
+            <pre><code>&lt;a href="https://auth.crafteri.net/login?service=https://your-website.com/crafteriauth/return" class="crafteri-button-dark"&gt;
+    Login with Crafteri
+&lt;/a&gt;
+
+&lt;style&gt;
+.crafteri-button-dark {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.crafteri-button-dark:hover {
+    background-color: #555;
+}
+&lt;/style&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>
