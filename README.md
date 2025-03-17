@@ -141,9 +141,9 @@ When verifying a token, you may receive the following responses:
 #### Successful Response
 ```json
 {
-  "email": "gregor@volny.sk",
-  "id": 5,
-  "username": "errwawyn",
+  "email": "name@domain.com",
+  "id": 69,
+  "username": "randomguy123",
   "valid": true
 }
 ```
@@ -196,12 +196,10 @@ The verified token response will include the following user information:
 
 ```json
 {
-  "id": "12345",
-  "username": "johndoe",
   "email": "john.doe@example.com",
-  "display_name": "John Doe",
-  "profile_picture": "https://crafteri.net/profile/12345.jpg",
-  "created_at": "2023-01-15T12:30:45Z"
+  "id": 12345,
+  "username": "johndoe",
+  "valid": true
 }
 ```
 
