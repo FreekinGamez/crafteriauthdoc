@@ -23,7 +23,7 @@ CrafteriAuth is an authentication system that allows users to log into third-par
 
 Before integrating CrafteriAuth, you need to request an API key from the Crafteri team. This key uniquely identifies your application and allows token verification.
 
-To request an API key, please contact us at [support@crafteri.net](mailto:support@crafteri.net) with the following information:
+To request an API key, please contact us at [info@crafteri.net](mailto:info@crafteri.net) with the following information:
 - Your application name
 - Your website domain
 - The redirect URL where users will be sent after authentication
@@ -63,13 +63,15 @@ def verify_token(token):
     response = requests.post(
         "https://auth.crafteri.net/api/verify-token",
         headers={"API-Key": "YOUR_API_KEY"},
-        json={"token": token}
+        json={"payload": token}  # Note: Token goes in "payload" field
     )
     
     if response.status_code == 200:
-        return response.json()  # Contains user information
-    else:
-        return None  # Authentication failed
+        data = response.json()
+        if data.get("valid", False):
+            return data  # Contains user information
+    
+    return None  # Authentication failed
 
 # In your callback handler
 def callback_handler(request):
@@ -95,11 +97,14 @@ const axios = require('axios');
 async function verifyToken(token) {
   try {
     const response = await axios.post('https://auth.crafteri.net/api/verify-token', 
-      { token }, 
+      { payload: token },  // Note: Token goes in "payload" field
       { headers: { 'API-Key': 'YOUR_API_KEY' } }
     );
     
-    return response.data; // Contains user information
+    if (response.data && response.data.valid) {
+      return response.data; // Contains user information
+    }
+    return null;
   } catch (error) {
     console.error('Token verification failed:', error);
     return null;
@@ -122,6 +127,54 @@ app.get('/crafteriauth/return', async (req, res) => {
     // Authentication failed
   }
 });
+```
+
+### Example API Responses
+
+When verifying a token, you may receive the following responses:
+
+#### Successful Response
+```json
+{
+  "email": "gregor@volny.sk",
+  "id": 5,
+  "username": "errwawyn",
+  "valid": true
+}
+```
+
+#### Error Responses
+
+**Invalid Token Signature**
+```json
+{
+  "error": "Invalid token: Signature verification failed",
+  "valid": false
+}
+```
+
+**Expired Token**
+```json
+{
+  "error": "Token expired",
+  "valid": false
+}
+```
+
+**Malformed Token**
+```json
+{
+  "error": "Invalid token: Not enough segments",
+  "valid": false
+}
+```
+
+**Invalid API Key**
+```json
+{
+  "error": "Unauthorized",
+  "success": false
+}
 ```
 
 ### Step 5: Store User Information 💾
@@ -172,7 +225,7 @@ The verified token response will include the following user information:
    - Ensure your redirect URL exactly matches the one you registered
    - Check for URL encoding issues in the `service` parameter
 
-For additional help, please contact us at [support@crafteri.net](mailto:support@crafteri.net).
+For additional help, please contact us at [info@crafteri.net](mailto:info@crafteri.net).
 
 ## Custom Integration Options 🧩
 
@@ -186,4 +239,4 @@ The CrafteriAuth service is subject to the following rate limits:
 
 ---
 
-© 2023 Crafteri. All rights reserved.
+© 2025 Crafteri. All rights reserved.
