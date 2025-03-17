@@ -30,14 +30,19 @@ To request an API key, please contact us at [info@crafteri.net](mailto:info@craf
 
 ### Step 2: Add the Login Button ✨
 
-Add the "Login with Crafteri" button to your website. You can use our pre-designed buttons or create your own.
+Add the "Login with Crafteri" button to your website. We provide sleek, modern buttons in both light and dark themes.
 
 **HTML Example:**
 ```html
-<a href="https://auth.crafteri.net/login?service=https://yourwebsite.com/crafteriauth/return" class="crafteri-login-btn">
-  Login with Crafteri
+<a href="https://auth.crafteri.net/login?service=https://yourwebsite.com/crafteriauth/return" class="crafteri-btn crafteri-btn-light">
+    <div class="crafteri-btn-content">
+        <img src="crafteri-logo.png" alt="Crafteri Logo" class="crafteri-logo">
+        <span class="crafteri-btn-text">Sign in with Crafteri</span>
+    </div>
 </a>
 ```
+
+For more button styles and options, including circular icon buttons and dark theme variants, check out our [example buttons](examples/login-button-examples.html). We provide ready-to-use CSS styles for all buttons.
 
 > **Important**: Replace `https://yourwebsite.com/crafteriauth/return` with your actual callback endpoint where users will be redirected after authentication.
 
